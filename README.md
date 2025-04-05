@@ -3,3 +3,6 @@ This is a Lottery Smart Contract Created using Solidity,Chainlink VRF and Chainl
 
 ## Made By
 Anant Ojha
+
+## Compatible With
+EVM(Ethereum Virtual Machine) based Platforms 
