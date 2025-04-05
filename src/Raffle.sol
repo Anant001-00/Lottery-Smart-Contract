@@ -3,13 +3,14 @@ pragma solidity 0.8.19;
 
 import {VRFConsumerBaseV2Plus} from "@chainlink/contracts/src/v0.8/vrf/dev/VRFConsumerBaseV2Plus.sol";
 import {VRFV2PlusClient} from "@chainlink/contracts/src/v0.8/vrf/dev/libraries/VRFV2PlusClient.sol";
-
+import {console} from "forge-std/Script.sol";
 /**
  * @title Raffle
  * @author Anant Ojha
  * @notice Raffle contract using Chainlink VRF
  * @dev It implements Chainlink VRFv2.5 and Chainlink Automation
  */
+
 contract Raffle is VRFConsumerBaseV2Plus {
     /**
      * Errors
@@ -123,6 +124,7 @@ contract Raffle is VRFConsumerBaseV2Plus {
             revert Raffle__TransactionFailed();
         }
         emit WinnerPicked(Winner);
+        console.log(s_requestId);
     }
     /**
      * Getter Function
