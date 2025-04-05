@@ -43,3 +43,5 @@ jobs:
         run: |
           forge test -vvv
         id: test
+env:
+  FOUNDRY_DISABLE_NIGHTLY_WARNING: 1
